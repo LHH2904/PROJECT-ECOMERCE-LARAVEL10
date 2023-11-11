@@ -3,7 +3,7 @@
     <!-- Main Content -->
     <section class="section">
         <div class="section-header">
-            <h1>Slider</h1>
+            <h1>Category</h1>
         </div>
 
         <div class="section-body">
@@ -11,9 +11,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>All Sliders</h4>
+                            <h4>All Categories</h4>
                             <div class="card-header-action">
-                                <a href="{{ route('admin.slider.create') }}" class="btn btn-primary"><i
+                                <a href="{{ route('admin.category.create') }}" class="btn btn-primary"><i
                                         class="fa-solid fa-plus"></i> Create New</a>
                             </div>
                         </div>
@@ -30,4 +30,28 @@
 @endsection
 @push('scripts')
     {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
+
+    <script>
+        $(document).ready(function() {
+            $('body').on('click', '.change-status', function() {
+                let isChecked = $(this).is(':checked');
+                let id = $(this).data('id');
+
+                $.ajax({
+                    url: "{{ route('admin.category.change-status') }}",
+                    method: 'PUT',
+                    data: {
+                        status: isChecked,
+                        id: id
+                    },
+                    success: function(data) {
+                        toastr.success(data.message);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(error);
+                    }
+                })
+            })
+        })
+    </script>
 @endpush

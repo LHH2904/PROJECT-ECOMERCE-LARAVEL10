@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputState">Status</label>
-                                    <select name="status" id="inputState" class="form-control" value="{{ old('type') }}">
+                                    <select name="status" id="inputState" class="form-control">
                                         <option value="1">Active
                                         </option>
                                         <option value="0">Inactive</option>
