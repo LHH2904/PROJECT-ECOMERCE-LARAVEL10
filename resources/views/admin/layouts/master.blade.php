@@ -155,7 +155,7 @@
                                 } else {
                                     Swal.fire(
                                         'Error!',
-                                        'Failed to delete. Please try again.',
+                                        data.message,
                                         'error'
                                     );
                                 }
