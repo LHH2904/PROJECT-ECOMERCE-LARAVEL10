@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 
     <link rel="stylesheet" href="{{ asset('backend/assets/css/bootstrap-iconpicker.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('backend/assets/modules/bootstrap-daterangepicker/daterangepicker.min.css') }}">
+
 
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
@@ -95,6 +98,7 @@
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('backend/assets/js/bootstrap-iconpicker.bundle.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/modules/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
 
     <!-- Page Specific JS File -->
     <script src="{{ asset('backend/assets/js/page/index-0.js') }}"></script>
