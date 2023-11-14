@@ -30,7 +30,7 @@ class ProductDataTable extends DataTable
                                 <i class='fa-solid fa-gear'></i>
                                 </button>
                                 <div class='dropdown-menu' x-placement='bottom-start' style='position: absolute; transform: translate3d(0px, 28px,0px); top: 0px; left: 0px; will-change: transform;'>
-                                    <a class='dropdown-item has-icon' href='#'><i class='far fa-heart'></i> Action</a>
+                                    <a class='dropdown-item has-icon' href='#'><i class='far fa-heart'></i> Image Gallery</a>
                                     <a class='dropdown-item has-icon' href='#'><i class='far fa-file'></i> Another something</a>
                                     <a class='dropdown-item has-icon' href='#'><i class='far fa-clock'></i> dsadasdsadAction</a>
                                 </div>
@@ -124,7 +124,7 @@ class ProductDataTable extends DataTable
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
-                ->width(170)
+                ->width(150)
                 ->addClass('text-center'),
         ];
     }

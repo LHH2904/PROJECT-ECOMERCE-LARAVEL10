@@ -114,12 +114,12 @@
 
                                 <div class="form-group">
                                     <label for="">Short Description</label>
-                                    <textarea name="short_description" class="form-control">{{ old('short_descriptrion') }}</textarea>
+                                    <textarea name="short_description" class="form-control">{{ old('short_description') }}</textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Long Description</label>
-                                    <textarea name="long_description" class="form-control summernote">{{ old('long_descriptrion') }}</textarea>
+                                    <textarea name="long_description" class="form-control summernote">{{ old('long_description') }}</textarea>
                                 </div>
 
                                 <div class="form-group">
