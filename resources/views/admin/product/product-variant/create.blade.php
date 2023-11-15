@@ -11,20 +11,19 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Create Variant</h4>
+                            <h4>Create variant</h4>
 
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.category.store') }}" method="POST">
+                            <form action="{{ route('admin.products-variant.store') }}" method="POST">
                                 @csrf
-                                <div class="form-group">
-                                    <label for="">Icon</label><br>
-                                    <button class="btn btn-primary" data-selected-class="btn-danger"
-                                        data-unselected-class="btn-info" role="iconpicker" name="icon"></button>
-                                </div>
                                 <div class="form-group">
                                     <label for="">Name</label>
                                     <input type="text" class="form-control" name="name" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="hidden" class="form-control" name="product"
+                                        value="{{ request()->product }}">
                                 </div>
                                 {{-- <div class="form-group">
                                     <label for="">Slug</label>
