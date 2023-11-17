@@ -13,7 +13,6 @@ use App\Http\Controllers\Backend\VendorProfileController;
 use App\Http\Controllers\Backend\ProductImageGalleryController;
 use App\Http\Controllers\Backend\ProductVariantController;
 use App\Http\Controllers\Backend\ProductVariantItemController;
-use App\Models\ProductVariantItem;
 use Illuminate\Support\Facades\Route;
 
 /**Admin Route */
@@ -60,3 +59,7 @@ Route::resource('products-variant', ProductVariantController::class);
 /**Products variant item Route */
 // Route::put('products-variant/change-status', [ProductVariantController::class, 'changeStatus'])->name('products-variant.change-status');
 Route::get('products-variant-item/{productId}/{variantId}', [ProductVariantItemController::class, 'index'])->name('products-variant-item.index');
+Route::get('products-variant-item/create/{productId}/{variantId}', [ProductVariantItemController::class, 'create'])->name('products-variant-item.create');
+Route::post('products-variant-item', [ProductVariantItemController::class, 'store'])->name('products-variant-item.store');
+Route::get('products-variant-item/{id}/edit', [ProductVariantItemController::class, 'edit'])->name('products-variant-item.edit');
+Route::delete('products-variant-item/{id}', [ProductVariantItemController::class, 'destroy'])->name('products-variant-item.destroy');
