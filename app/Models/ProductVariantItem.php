@@ -11,6 +11,6 @@ class ProductVariantItem extends Model
 
     public function productVariant()
     {
-        return $this->belongsTo(ProductVariantItem::class);
+        return $this->belongsTo(ProductVariant::class);
     }
 }

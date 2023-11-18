@@ -23,12 +23,10 @@ class ProductVariantItemDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($query) {
-                $editBtn = "<a href='" . route('admin.products.edit', $query->id) . "' class='btn btn-primary'><i class='fa-regular fa-pen-to-square'></i></a>";
-                $deleteBtn = "<a href='" . route('admin.products.destroy', $query->id) . "' class='btn btn-danger ml-2 delete-item'><i class='fa-regular fa-trash-can'></i></a>";
+                $editBtn = "<a href='" . route('admin.products-variant-item.edit', $query->id) . "' class='btn btn-primary'><i class='fa-regular fa-pen-to-square'></i></a>";
+                $deleteBtn = "<a href='" . route('admin.products-variant-item.destroy', $query->id) . "' class='btn btn-danger ml-2 delete-item'><i class='fa-regular fa-trash-can'></i></a>";
+
                 return $editBtn . $deleteBtn;
-            })
-            ->addColumn('variant_name', function ($query) {
-                return $query->productVariant->name;
             })
             ->addColumn('status', function ($query) {
                 if ($query->status == 1) {
@@ -46,11 +44,14 @@ class ProductVariantItemDataTable extends DataTable
                 return $button;
             })
             ->addColumn('is_default', function ($query) {
-                if ($query->is_default == 1) {
+                if ($query->is_default === 1) {
                     return '<i class="badge badge-success">default</i>';
                 } else {
                     return '<i class="badge badge-danger">no</i>';
                 }
+            })
+            ->addColumn('variant_name', function ($query) {
+                return $query->productVariant->name;
             })
             ->rawColumns(['action', 'status', 'is_default'])
             ->setRowId('id');
@@ -92,7 +93,6 @@ class ProductVariantItemDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-
             Column::make('id'),
             Column::make('name'),
             Column::make('variant_name'),
@@ -102,7 +102,7 @@ class ProductVariantItemDataTable extends DataTable
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
-                ->width(100)
+                ->width(200)
                 ->addClass('text-center'),
         ];
     }

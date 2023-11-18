@@ -51,15 +51,19 @@ Route::resource('vendor-profile', AdminVendorProfileController::class);
 Route::get('product/get-subcategories', [ProductController::class, 'getSubCategories'])->name('product.get-subcategories');
 Route::get('product/get-childcategories', [ProductController::class, 'getChildCategories'])->name('product.get-child-categories');
 Route::resource('products', ProductController::class);
+
 /**Products image gallery Route */
 Route::resource('products-image-gallery', ProductImageGalleryController::class);
+
 /**Products variant Route */
 Route::put('products-variant/change-status', [ProductVariantController::class, 'changeStatus'])->name('products-variant.change-status');
 Route::resource('products-variant', ProductVariantController::class);
+
 /**Products variant item Route */
-// Route::put('products-variant/change-status', [ProductVariantController::class, 'changeStatus'])->name('products-variant.change-status');
 Route::get('products-variant-item/{productId}/{variantId}', [ProductVariantItemController::class, 'index'])->name('products-variant-item.index');
 Route::get('products-variant-item/create/{productId}/{variantId}', [ProductVariantItemController::class, 'create'])->name('products-variant-item.create');
 Route::post('products-variant-item', [ProductVariantItemController::class, 'store'])->name('products-variant-item.store');
-Route::get('products-variant-item/{id}/edit', [ProductVariantItemController::class, 'edit'])->name('products-variant-item.edit');
-Route::delete('products-variant-item/{id}', [ProductVariantItemController::class, 'destroy'])->name('products-variant-item.destroy');
+Route::get('products-variant-item-edit/{variantItemId}', [ProductVariantItemController::class, 'edit'])->name('products-variant-item.edit');
+Route::put('products-variant-item-update/{variantItemId}', [ProductVariantItemController::class, 'update'])->name('products-variant-item.update');
+Route::delete('products-variant-item/{variantItemId}', [ProductVariantItemController::class, 'destroy'])->name('products-variant-item.destroy');
+Route::put('products-variant-item-status/', [ProductVariantItemController::class, 'changeStatus'])->name('products-variant-item.change-status');
