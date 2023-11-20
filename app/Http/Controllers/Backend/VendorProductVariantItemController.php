@@ -15,7 +15,6 @@ class VendorProductVariantItemController extends Controller
     public function index(VendorProductVariantItemDataTable $dataTable, $productId, $variantId)
     {
         $product = Product::findOrFail($productId);
-
         $variant = ProductVariant::findOrFail($variantId);
         return $dataTable->render('vendor.product.product-variant-item.index', compact('product', 'variant'));
     }
