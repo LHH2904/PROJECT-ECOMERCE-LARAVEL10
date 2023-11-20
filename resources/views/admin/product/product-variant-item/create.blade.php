@@ -13,7 +13,7 @@
                             <h4>Create Variant Item</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.products-variant-item.store') }}" method="POST">
+                            <form action="{{ route('vendor.products-variant-item.store') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Variant Name</label>

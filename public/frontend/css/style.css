@@ -9437,3 +9437,8 @@ a:not([href]):not([class]):hover {
 .create_button {
     text-align: right;
 }
+
+#flexSwitchCheckDefault {
+    height: 20px !important;
+    width: 50px !important;
+}
