@@ -59,12 +59,17 @@
                 </ul>
             </li>
             {{-- Vendor --}}
-            <li class="dropdown {{ setActive(['admin.vendor-profile.*']) }}">
+            <li
+                class="dropdown {{ setActive(['admin.vendor-profile.*', 'admin.coupons.*', 'admin.shipping-rule.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Ecommerce</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{ setActive(['admin.vendor-profile.*']) }}"><a class="nav-link"
                             href="{{ route('admin.flash-sale.index') }}">Flash Sale</a></li>
+                    <li class="{{ setActive(['admin.coupons.*']) }}"><a class="nav-link"
+                            href="{{ route('admin.coupons.index') }}">Coupons</a></li>
+                    <li class="{{ setActive(['admin.shipping-rule.*']) }}"><a class="nav-link"
+                            href="{{ route('admin.shipping-rule.index') }}">Shipping Rule</a></li>
                     <li class="{{ setActive(['admin.vendor-profile.*']) }}"><a class="nav-link"
                             href="{{ route('admin.vendor-profile.index') }}">Vendor Profile</a></li>
                 </ul>
@@ -88,8 +93,8 @@
                     <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li>
                 </ul>
             </li> --}}
-            <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank
-                        Page</span></a></li>
+            <li><a class="nav-link" href="{{ route('admin.setting.index') }}"><i class="far fa-square"></i>
+                    <span>Settings</span></a></li>
         </ul>
     </aside>
 </div>
