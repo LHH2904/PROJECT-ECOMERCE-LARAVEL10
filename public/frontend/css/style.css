@@ -9440,7 +9440,7 @@ a:not([href]):not([class]):hover {
 
 #flexSwitchCheckDefault {
     height: 20px !important;
-    width: 50px !important;
+    width: 35px !important;
 }
 
 /* .page-item.disabled > .page-link {

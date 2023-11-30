@@ -1,4 +1,7 @@
 @extends('frontend.layouts.master')
+@section('title')
+    {{ $settings->site_name }} || Ecommerce
+@endsection
 
 @section('content')
     {{-- PRODUCT MODAL VIEW START --}}
@@ -172,64 +175,64 @@
 
 
     <!--============================
-                                                                                                                        HOT DEALS START
-                                                                                                                    ==============================-->
+                                                                                                                                HOT DEALS START
+                                                                                                                            ==============================-->
     @include('frontend.home.sections.hot-deals')
     <!--============================
-                                                                                                                        HOT DEALS END
-                                                                                                                    ==============================-->
+                                                                                                                                HOT DEALS END
+                                                                                                                            ==============================-->
 
 
     <!--============================
-                                                                                                                        ELECTRONIC PART START
-                                                                                                                    ==============================-->
+                                                                                                                                ELECTRONIC PART START
+                                                                                                                            ==============================-->
     @include('frontend.home.sections.category-product-slider-one')
     <!--============================
-                                                                                                                        ELECTRONIC PART END
-                                                                                                                    ==============================-->
+                                                                                                                                ELECTRONIC PART END
+                                                                                                                            ==============================-->
 
 
     <!--============================
-                                                                                                                        ELECTRONIC PART START
-                                                                                                                    ==============================-->
+                                                                                                                                ELECTRONIC PART START
+                                                                                                                            ==============================-->
     @include('frontend.home.sections.category-product-slider-two')
     <!--============================
-                                                                                                                        ELECTRONIC PART END
-                                                                                                                    ==============================-->
+                                                                                                                                ELECTRONIC PART END
+                                                                                                                            ==============================-->
 
 
     <!--============================
-                                                                                                                        LARGE BANNER  START
-                                                                                                                    ==============================-->
+                                                                                                                                LARGE BANNER  START
+                                                                                                                            ==============================-->
     @include('frontend.home.sections.large-banner')
     <!--============================
-                                                                                                                        LARGE BANNER  END
-                                                                                                                    ==============================-->
+                                                                                                                                LARGE BANNER  END
+                                                                                                                            ==============================-->
 
 
     <!--============================
-                                                                                                                        WEEKLY BEST ITEM START
-                                                                                                                    ==============================-->
+                                                                                                                                WEEKLY BEST ITEM START
+                                                                                                                            ==============================-->
     @include('frontend.home.sections.blog')
     <!--============================
-                                                                                                                        WEEKLY BEST ITEM END
-                                                                                                                    ==============================-->
+                                                                                                                                WEEKLY BEST ITEM END
+                                                                                                                            ==============================-->
 
 
     <!--============================
-                                                                                                                      HOME SERVICES START
-                                                                                                                    ==============================-->
+                                                                                                                              HOME SERVICES START
+                                                                                                                            ==============================-->
     @include('frontend.home.sections.services')
     <!--============================
-                                                                                                                        HOME SERVICES END
-                                                                                                                    ==============================-->
+                                                                                                                                HOME SERVICES END
+                                                                                                                            ==============================-->
 
 
     <!--============================
-                                                                                                                        HOME BLOGS START
-                                                                                                                    ==============================-->
+                                                                                                                                HOME BLOGS START
+                                                                                                                            ==============================-->
     @include('frontend.home.sections.services')
     <!--============================
-                                                                                                                        HOME BLOGS END
-                                                                                                                    ==============================-->
+                                                                                                                                HOME BLOGS END
+                                                                                                                            ==============================-->
 @endsection

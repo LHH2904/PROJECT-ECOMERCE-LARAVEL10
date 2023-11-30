@@ -1,5 +1,9 @@
 @extends('frontend.layouts.master')
 
+@section('title')
+    {{ $settings->site_name }} || Products Detail
+@endsection
+
 @section('content')
     {{-- PRODUCT MODAL VIEW START --}}
     <section class="product_popup_modal">
@@ -202,7 +206,8 @@
                             </p>
                             @if (checkDiscount($product))
                                 <h4>{{ $settings->currency_icon }}{{ $product->offer_price }}
-                                    <del>{{ $settings->currency_icon }}{{ $product->price }}</del></h4>
+                                    <del>{{ $settings->currency_icon }}{{ $product->price }}</del>
+                                </h4>
                             @else
                                 <h4>{{ $settings->currency_icon }}{{ $product->price }}</h4>
                             @endif

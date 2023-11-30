@@ -1,8 +1,11 @@
 @extends('vendor.layouts.master')
+@section('title')
+    {{ $settings->site_name }} || Shop Profile
+@endsection
 @section('content')
     <!--=============================
-            DASHBOARD START
-            ==============================-->
+                DASHBOARD START
+                ==============================-->
     <section id="wsus__dashboard">
         <div class="container-fluid">
             @include('vendor.layouts.slidebar')
@@ -74,6 +77,6 @@
         </div>
     </section>
     <!--=============================
-            DASHBOARD START
-            ==============================-->
+                DASHBOARD START
+                ==============================-->
 @endsection
