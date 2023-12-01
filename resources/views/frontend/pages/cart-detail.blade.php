@@ -63,7 +63,7 @@
                                                     alt="product" class="img-fluid w-100">
                                             </td>
 
-                                            <td class="wsus__pro_name">
+                                            <td class="wsus__pro_name" style="width: 285px">
                                                 <p>{{ $item->name }}</p>
                                                 @foreach ($item->options->variants as $key => $variant)
                                                     <span>{{ $key }}: {{ $variant['name'] }}

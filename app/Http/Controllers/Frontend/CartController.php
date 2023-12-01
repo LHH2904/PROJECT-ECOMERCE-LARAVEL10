@@ -77,6 +77,17 @@ class CartController extends Controller
         return $total;
     }
 
+    // Get Cart Total Amount
+    public function cartTotal()
+    {
+        $total = 0;
+
+        foreach (Cart::content() as $product) {
+            $total += $this->getProductTotal($product->rowId);
+        }
+        return $total;
+    }
+
     // Clear all cart products
     public function clearCart()
     {
@@ -91,5 +102,24 @@ class CartController extends Controller
         Cart::remove($rowId);
 
         return redirect()->back();
+    }
+
+    // Get Cart Count
+    public function getCartCount()
+    {
+        return Cart::content()->count();
+    }
+
+    // Get All Cart Product
+    public function getCartProducts()
+    {
+        return Cart::content();
+    }
+
+    // Remove Product form Sibar Cart
+    public function removeSidebarProduct(Request $request)
+    {
+        Cart::remove($request->rowId);
+        return response(['status' => 'success', 'message' => 'Product removed Successfully']);
     }
 }
