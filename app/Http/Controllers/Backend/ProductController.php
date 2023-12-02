@@ -134,7 +134,7 @@ class ProductController extends Controller
         // Handle Image upload
         $imagePath = $this->updateImage($request, 'image', 'uploads', $product->thumb_image);
 
-        $product->thumb_image = empty(!$imagePath) ? $imagePath : $product->thumb_image;;
+        $product->thumb_image = empty(!$imagePath) ? $imagePath : $product->thumb_image;
         $product->name = $request->name;
         $product->slug = Str::slug($request->name);
         $product->category_id = $request->category;

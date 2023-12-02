@@ -53,6 +53,9 @@ Route::get('cart-products', [CartController::class, 'getCartProducts'])->name('c
 Route::post('cart/remove-sibebar-product', [CartController::class, 'removeSidebarProduct'])->name('cart.remove-sibebar-product');
 Route::get('cart/sibebar-product-total', [CartController::class, 'cartTotal'])->name('cart.sibebar-product-total');
 
+Route::get('apply-coupon', [CartController::class, 'applyCoupon'])->name('apply-coupon');
+Route::get('coupon-calculation', [CartController::class, 'couponCalculation'])->name('coupon-calculation');
+
 
 
 
