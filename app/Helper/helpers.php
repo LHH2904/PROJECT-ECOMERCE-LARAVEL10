@@ -103,3 +103,25 @@ function getCartDiscount()
         return 0;
     }
 }
+
+// get select shipping for form session
+function getShippingFee()
+{
+    if (Session::has('shipping_method')) {
+        return Session::get('shipping_method')['cost'];
+    } else {
+        return 0;
+    }
+}
+
+// get payable amount
+function getFinalPayableAmount()
+{
+    return getMainCartTotal() + getShippingFee();
+}
+
+// limit text
+function limitText($text, $limit = 10)
+{
+    return \Str::limit($text, $limit);
+}

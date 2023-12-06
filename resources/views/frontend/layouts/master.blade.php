@@ -157,6 +157,12 @@
             @endforeach
         @endif
     </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.auto-click').click();
+        })
+    </script>
     @include('frontend.layouts.scripts')
     @stack('scripts')
 </body>
