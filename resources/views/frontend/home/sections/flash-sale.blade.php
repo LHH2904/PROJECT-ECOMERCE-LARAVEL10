@@ -16,10 +16,12 @@
             @foreach ($flashSaleItems as $item)
                 @php
                     $product = \App\Models\Product::find($item->product_id);
+
                 @endphp
                 <div class="col-xl-3 col-sm-6 col-lg-4">
                     <div class="wsus__product_item">
                         <span class="wsus__new">{{ productType($product->product_type) }}</span>
+                        {{-- <span class="wsus__new">{{ $product->product_type }}</span> --}}
                         @if (checkDiscount($product))
                             <span
                                 class="wsus__minus">-{{ calculateDiscountPercent($product->price, $product->offer_price) }}%</span>
@@ -80,6 +82,11 @@
                     </div>
                 </div>
             @endforeach
+        </div>
+        <div class="mt-5">
+            {{-- @if ($flashSaleItems->hasPages())
+                {{ $flashSaleItems->links() }}
+            @endif --}}
         </div>
     </div>
 </section>

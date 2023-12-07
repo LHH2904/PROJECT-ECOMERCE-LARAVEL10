@@ -95,7 +95,7 @@ class ChildCategoryDataTable extends DataTable
             Column::make('category'),
             Column::make('sub_category'),
             Column::make('slug'),
-            Column::make('status')->width(200),
+            Column::make('status'),
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)

@@ -101,7 +101,6 @@ class FlashSaleItemDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-
             Column::make('id'),
             Column::make('product_name'),
             Column::make('show_at_home'),

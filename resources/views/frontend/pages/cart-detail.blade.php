@@ -12,7 +12,7 @@
                         <h4>cart View</h4>
                         <ul>
                             <li><a href="#">home</a></li>
-                            <li><a href="#">peoduct</a></li>
+                            <li><a href="#">product</a></li>
                             <li><a href="#">cart view</a></li>
                         </ul>
                     </div>
@@ -66,7 +66,7 @@
                                             <td class="wsus__pro_name" style="width: 285px">
                                                 <p>{{ $item->name }}</p>
                                                 @foreach ($item->options->variants as $key => $variant)
-                                                    <span>{{ $key }}: {{ $variant['name'] }}
+                                                    <span class="text-center">{{ $key }}: {{ $variant['name'] }}
                                                         ({{ $settings->currency_icon . $variant['price'] }})
                                                     </span>
                                                 @endforeach

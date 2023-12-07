@@ -24,7 +24,7 @@
                 <div class="wsus__section_header for_md">
                     <h3>Popular Categories</h3>
                     <div class="monthly_top_filter">
-                        {{-- <button class=" active" data-filter="*">All</button> --}}
+                        <button class=" active" data-filter="*">All</button>
                         @php
                             $products = [];
                         @endphp
@@ -60,7 +60,7 @@
                                         ->get();
                                 }
                             @endphp
-                            <button class="{{ $loop->index === 0 ? 'auto_click active' : '' }}"
+                            <button class="{{ $loop->index === 0 ? 'auto_click ' : '' }}"
                                 data-filter=".category-{{ $loop->index }}">{{ $category->name }}</button>
                         @endforeach
 
@@ -77,7 +77,7 @@
                                 <a class="wsus__hot_deals__single" href="#">
                                     <div class="wsus__hot_deals__single_img">
                                         <img src="{{ asset($item->thumb_image) }}" alt="bag"
-                                            class="img-fluid w-100">
+                                            class="img-fluid w-100" style="height: 150px">
                                     </div>
                                     <div class="wsus__hot_deals__single_text">
                                         <h5>{!! limitText($item->name) !!}</h5>

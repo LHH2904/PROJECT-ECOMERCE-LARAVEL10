@@ -105,7 +105,7 @@ class SellerPendingProductsDataTable extends DataTable
             ->columns($this->getColumns())
             ->minifiedAjax()
             //->dom('Bfrtip')
-            ->orderBy(0)
+            ->orderBy(1)
             ->selectStyleSingle()
             ->buttons([
                 Button::make('excel'),

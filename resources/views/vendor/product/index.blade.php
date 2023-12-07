@@ -6,8 +6,8 @@
 
 @section('content')
     <!--=============================
-                                                                                                        DASHBOARD START
-                                                                                                        ==============================-->
+                                                                                                            DASHBOARD START
+                                                                                                            ==============================-->
     <section id="wsus__dashboard">
         <div class="container-fluid">
             @include('vendor.layouts.slidebar')
@@ -16,7 +16,7 @@
                     <div class="dashboard_content mt-2 mt-md-0">
                         <h3><i class="far fa-user"></i>Products</h3>
                         <div class="d-flex flex-row-reverse mb-3">
-                            <a href="{{ route('vendor.products-variant.create') }}" class="btn btn-primary"><i
+                            <a href="{{ route('vendor.products.create') }}" class="btn btn-primary"><i
                                     class="fa-solid fa-plus"></i> Create Product</a>
                         </div>
                         <div class="wsus__dashboard_profile">
@@ -30,8 +30,8 @@
         </div>
     </section>
     <!--=============================
-                                                                                                        DASHBOARD START
-                                                                                                        ==============================-->
+                                                                                                            DASHBOARD START
+                                                                                                            ==============================-->
 @endsection
 @push('scripts')
     {{ $dataTable->scripts(attributes: ['type' => 'module']) }}

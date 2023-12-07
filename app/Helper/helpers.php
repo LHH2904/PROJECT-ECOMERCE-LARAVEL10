@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Session;
 
+
 /** Set sidebar item active */
 function setActive(array $route)
 {
@@ -27,10 +28,22 @@ function checkDiscount($product)
 }
 
 /** Calculate discount percent */
+// function calculateDiscountPercent($originalPrice, $discountPrice)
+// {
+//     $discountAmount = $originalPrice - $discountPrice;
+//     $discountPercent = ($discountAmount / $originalPrice) * 100;
+
+//     return $discountPercent;
+// }
+
 function calculateDiscountPercent($originalPrice, $discountPrice)
 {
+    if ($originalPrice <= 0) {
+        return 0; // Handle the case where original price is zero or negative
+    }
+
     $discountAmount = $originalPrice - $discountPrice;
-    $discountPercent = ($discountAmount / $originalPrice) * 100;
+    $discountPercent = round(($discountAmount / $originalPrice) * 100);
 
     return $discountPercent;
 }
@@ -121,7 +134,7 @@ function getFinalPayableAmount()
 }
 
 // limit text
-function limitText($text, $limit = 10)
+function limitText($text, $limit = 20)
 {
     return \Str::limit($text, $limit);
 }

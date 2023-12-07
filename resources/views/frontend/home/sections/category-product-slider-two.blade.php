@@ -47,7 +47,7 @@
         <div class="row flash_sell_slider">
             @foreach ($products as $product)
                 <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="wsus__product_item">
+                    <div class="wsus__product_item" style="height: 440px">
                         <span class="wsus__new">{{ productType($product->product_type) }}</span>
                         @if (checkDiscount($product))
                             <span
