@@ -153,7 +153,7 @@
                         <h4>products details</h4>
                         <ul>
                             <li><a href="#">home</a></li>
-                            <li><a href="#">peoduct</a></li>
+                            <li><a href="#">product</a></li>
                             <li><a href="#">product details</a></li>
                         </ul>
                     </div>
@@ -296,7 +296,8 @@
                                 </li>
                             </ul>
                             <div class="wsus__det_sidebar_banner">
-                                <img src="images/blog_1.jpg" alt="banner" class="img-fluid w-100">
+                                <img src="{{ asset('frontend/images/blog_1.jpg') }}" alt="banner"
+                                    class="img-fluid w-100">
                                 <div class="wsus__det_sidebar_banner_text_overlay">
                                     <div class="wsus__det_sidebar_banner_text">
                                         <p>Black Friday Sale</p>

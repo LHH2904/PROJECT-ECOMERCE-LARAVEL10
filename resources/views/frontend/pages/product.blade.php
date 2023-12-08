@@ -33,9 +33,9 @@
                         <img src="{{ asset('frontend/images/pro_banner_1.jpg') }}" alt="banner" class="img-fluid w-100">
                         <div class="wsus__pro_page_bammer_text">
                             <div class="wsus__pro_page_bammer_text_center">
-                                <p>up to <span>70% off</span></p>
-                                <h5>wemen's jeans Collection</h5>
-                                <h3>fashion for wemen's</h3>
+                                <p>up to <span>30% off</span></p>
+                                <h5>Smart Watch Collection</h5>
+                                <h3>Smart Watch</h3>
                                 <a href="#" class="add_cart">Discover Now</a>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                                 <div class="row">
                                     {{-- show product --}}
                                     @foreach ($products as $product)
-                                        <div class="col-xl-4 col-sm-6" style="height: 500px">
+                                        <div class="col-xl-4 col-sm-6" style="height: 480px">
                                             <div class="wsus__product_item">
                                                 <span class="wsus__new">{{ productType($product->product_type) }}</span>
                                                 @if (checkDiscount($product))
@@ -174,20 +174,11 @@
                                                             data-bs-target="#exampleModal-{{ $product->id }}"><i
                                                                 class="far fa-eye"></i></a>
                                                     </li>
-                                                    <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="#"><i class="far fa-random"></i></a>
+
                                                 </ul>
                                                 <div class="wsus__product_details">
                                                     <a class="wsus__category"
                                                         href="#">{{ $product->category->name }} </a>
-                                                    <p class="wsus__pro_rating">
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                        <span>(133 review)</span>
-                                                    </p>
                                                     <a class="wsus__pro_name"
                                                         href="{{ route('product-detail', $product->slug) }}">{{ $product->name }}</a>
                                                     @if (checkDiscount($product))
@@ -249,14 +240,6 @@
                                                 <div class="wsus__product_details">
                                                     <a class="wsus__category"
                                                         href="#">{{ @$product->category->name }}</a>
-                                                    <p class="wsus__pro_rating">
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                        <span>(17 review)</span>
-                                                    </p>
                                                     <a class="wsus__pro_name"
                                                         href="{{ route('product-detail', $product->slug) }}">{{ $product->name }}</a>
                                                     @if (checkDiscount($product))

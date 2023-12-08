@@ -1,10 +1,10 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="index.html">Enzo</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <a href="index.html">Enzo</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
@@ -16,7 +16,8 @@
             {{-- Category --}}
             <li
                 class="dropdown {{ setActive(['admin.category.*', 'admin.sub-category.*', 'admin.child-category.*']) }}">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                        class="fa-solid fa-layer-group"></i>
                     <span>Manage Categories</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{ setActive(['admin.category.*']) }}"><a class="nav-link"
@@ -38,7 +39,8 @@
                     'admin.seller-products.*',
                     'admin.seller-pending-products.*',
                 ]) }}">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                        class="fa-solid fa-boxes-stacked"></i>
                     <span>Manage Product</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{ setActive(['admin.brand.*']) }}"><a class="nav-link"
@@ -67,7 +69,8 @@
                     'admin.payment-settings.*',
                     'admin.flash-sale.*',
                 ]) }}">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                        class="fa-solid fa-warehouse"></i>
                     <span>Ecommerce</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{ setActive(['admin.flash-sale.*']) }}"><a class="nav-link"
@@ -85,7 +88,8 @@
             </li>
             {{-- Slider --}}
             <li class="dropdown {{ setActive(['admin.slider.*']) }}">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                        class="fa-regular fa-images"></i>
                     <span>Manage Sliders</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{ setActive(['admin.slider.*']) }}"><a class="nav-link"
@@ -104,7 +108,7 @@
                     <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li>
                 </ul>
             </li> --}}
-            <li><a class="nav-link" href="{{ route('admin.setting.index') }}"><i class="far fa-square"></i>
+            <li><a class="nav-link" href="{{ route('admin.setting.index') }}"><i class="fa-solid fa-gear"></i>
                     <span>Settings</span></a></li>
         </ul>
     </aside>
